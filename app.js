@@ -3,7 +3,7 @@ const linksGrid = document.getElementById("linksGrid");
 const themeToggle = document.getElementById("themeToggle");
 
 let activeTag = "all";
-let theme = localStorage.getItem("mitbringsel-theme") || "day";
+let theme = localStorage.getItem("mitbringsel-theme") || "night";
 
 const uniqueTags = [...new Set(links.map((item) => item.tag))].sort();
 const tags = ["all", ...uniqueTags];
