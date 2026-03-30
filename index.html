@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mitbringsel</title>
+    <meta
+      name="description"
+      content="mitbringsel.de - a personal curated links page with thoughtful notes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./links.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="spring-doodle flower flower-left" aria-hidden="true"></div>
+    <div class="spring-doodle flower flower-right" aria-hidden="true"></div>
+    <div class="spring-doodle tree tree-left" aria-hidden="true"></div>
+    <div class="spring-doodle tree tree-right" aria-hidden="true"></div>
+    <main>
+      <header>
+        <div class="header-row">
+          <h1>mitbringsel</h1>
+          <button id="themeToggle" class="theme-toggle" type="button">night mode</button>
+        </div>
+        <p class="signature">from amelie for the world <3</p>
+        <p class="subtitle">
+          A small collection of things worth bringing home from the web:
+          <br />
+          thoughtful essays, practical tools, and lovely corners worth revisiting.
+        </p>
+      </header>
+
+      <section aria-label="Filter links by tag">
+        <div id="filterBar" class="filter-bar"></div>
+      </section>
+
+      <section aria-live="polite">
+        <div id="linksGrid" class="links-grid"></div>
+      </section>
+    </main>
+  </body>
+</html>
