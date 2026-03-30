@@ -5,7 +5,8 @@ const themeToggle = document.getElementById("themeToggle");
 let activeTag = "all";
 let theme = localStorage.getItem("mitbringsel-theme") || "night";
 
-const uniqueTags = [...new Set(links.map((item) => item.tag))].sort();
+const validLinks = links.filter((item) => item && typeof item.tag === "string" && item.tag.trim());
+const uniqueTags = [...new Set(validLinks.map((item) => item.tag))].sort();
 const tags = ["all", ...uniqueTags];
 
 function createTagButtons() {
@@ -32,7 +33,9 @@ function createTagButtons() {
 
 function renderLinks() {
   linksGrid.innerHTML = "";
-  const visible = activeTag === "all" ? links : links.filter((item) => item.tag === activeTag);
+  const visible = activeTag === "all"
+    ? validLinks
+    : validLinks.filter((item) => item.tag === activeTag);
 
   if (!visible.length) {
     const empty = document.createElement("p");

@@ -54,7 +54,7 @@ const links = [
     tag: "videos",
     source: "Aeon",
     url: "https://aeon.co/videos/as-technologies-mine-our-attention-we-must-look-to-artists"
-  },,
+  },
   {
     title: "radio.garden",
     note: "Spin the globe and listen to live radio streams from everywhere. I am having too much fun with this and have been loving Pan African Space Station.",
